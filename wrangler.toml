@@ -1,0 +1,9 @@
+name = "post-pick"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+# public/ の中身を静的配信する。
+# パスに一致するファイルがあればそれを返し、無いとき（= /api/pick）だけ Worker が動く。
+[assets]
+directory = "./public"
+binding = "ASSETS"
